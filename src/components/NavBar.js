@@ -1,16 +1,56 @@
-import React from 'react'
-import { AppBar, Toolbar, Typography, Button } from '@mui/material'
+import React, { useState } from 'react'
+import { AppBar, Toolbar, Typography, Button, IconButton } from '@mui/material'
+import { makeStyles } from '@mui/styles'
+import { useTranslation } from 'react-i18next'
+import LanguageSwitcher from './LanguageSwitcher'
+import MenuIcon from '@mui/icons-material/Menu'
+import { useNavigate } from 'react-router-dom'
+
+const useStyles = makeStyles({
+    root: {
+        flexGrow: 1,
+    },
+    title: {
+        flexGrow: 1,
+    },
+})
 
 const NavBar = () => {
+    const classes = useStyles()
+    const { t } = useTranslation()
+
+    const [open, setOpen] = useState()
+
+    const navigate = useNavigate()
+
+    const redirectProfil = () => {
+        navigate('/profil')
+    }
+
+    const handleMenu = () => {
+        setOpen(!open)
+    }
+
     return (
-        <AppBar position="static" >
+        <AppBar position="static">
             <Toolbar>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                <IconButton
+                    size="large"
+                    edge="start"
+                    color="inherit"
+                    aria-label="menu"
+                    onClick={handleMenu}
+                >
+                    <MenuIcon />
+                </IconButton>
+                <Typography variant="h6" component="div" className={classes.title}>
                     SportAddict
                 </Typography>
-                <Button color="inherit">Equipement</Button>
-                <Button color="inherit">Calendrier</Button>
-                <Button color="inherit">Plan d entraînement</Button>
+                <Button color="inherit">{t('Equipment')}</Button>
+                <Button color="inherit">{t('Calendar')}</Button>
+                <Button color="inherit">{t('TrainingPlan')}</Button>
+                <Button color="inherit" onClick={redirectProfil}>{t('MyProfil')}</Button>
+                <LanguageSwitcher />
             </Toolbar>
         </AppBar >
     )

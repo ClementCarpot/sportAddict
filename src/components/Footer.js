@@ -5,20 +5,18 @@ import { makeStyles } from '@mui/styles'
 const useStyles = makeStyles({
     appBar: {
         top: 'auto',
-        position: 'static',
+        bottom: 0,
+        justifyContent: 'space-between',
     },
 })
 
 const Footer = () => {
     const classes = useStyles()
     return (
-        <AppBar color="primary" className={classes.appBar} >
+        <AppBar position="static" color="primary" className={classes.appBar}>
             <Toolbar>
                 <Typography color="inherit">
                     À propos
-                </Typography>
-                <Typography color="inherit">
-                    Nous contacter
                 </Typography>
             </Toolbar>
         </AppBar>
