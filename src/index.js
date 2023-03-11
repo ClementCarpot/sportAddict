@@ -14,6 +14,8 @@ import TrainingPlan from './pages/TrainingPlan'
 import Calendar from './pages/Calendar'
 import Nopage from './pages/NoPage'
 import Profil from './pages/Profil'
+import Equipment from './pages/Equipment'
+import Login from './pages/Login'
 
 i18n
     .use(LanguageDetector)
@@ -45,8 +47,10 @@ root.render(
                     <Route path='/' /* element={<Layout />}*/>
                         <Route index element={<App />} />
                         <Route path='/trainingPlan' element={<TrainingPlan />} />
+                        <Route path='/equipment' element={<Equipment />} />
                         <Route path='/calendar' element={<Calendar />} />
                         <Route path='/profil' element={<Profil />} />
+                        <Route path='/login' element={<Login />} />
                         <Route path='/*' element={<Nopage />} />
                     </Route>
                 </Routes>
