@@ -1,9 +1,13 @@
 {
-    "Equipment": "Equipment",
-    "Calendar": "Calendar",
-    "TrainingPlan": "Training plan",
-    "Home": "Home",
-    "NoPage": "The page you’re looking for doesn’t exist.",
-    "BackHome": "Back home",
-    "MyProfil": "My profil"
+    "equipment": "Equipment",
+    "calendar": "Calendar",
+    "trainingPlan": "Training plan",
+    "home": "Home",
+    "noPage": "The page you’re looking for doesn’t exist.",
+    "backHome": "Back home",
+    "myProfil": "My profil",
+    "username": "Username",
+    "password": "Password",
+    "signUp": "Sign up",
+    "signIn": "Sign In"
 }

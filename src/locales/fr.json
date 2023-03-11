@@ -1,9 +1,13 @@
 {
-    "Equipment": "Équipement",
-    "Calendar": "Calendrier",
-    "TrainingPlan": "Plan d'entraînement",
-    "Home": "Accueil",
-    "NoPage": "Il semblerait que la page que vous cherchez n'existe pas.",
-    "BackHome": "Retourner à l'accueil",
-    "MyProfil": "Mon profil"
+    "equipment": "Équipement",
+    "calendar": "Calendrier",
+    "trainingPlan": "Plan d'entraînement",
+    "home": "Accueil",
+    "noPage": "Il semblerait que la page que vous cherchez n'existe pas.",
+    "backHome": "Retourner à l'accueil",
+    "myProfil": "Mon profil",
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "signUp": "S'inscrire",
+    "signIn": "Connexion"
 }
